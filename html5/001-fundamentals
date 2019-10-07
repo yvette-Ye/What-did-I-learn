@@ -1,0 +1,21 @@
+HTML--HyperText Markup Language(超文本标记语言)
+·html就是一种标记语言，它所有的标签和语句按照一定的规则写成后缀名为.html或.htm的html文件，能被浏览器所识别并翻译成现在我们所见到的网页。
+·基本结构：
+    <!DOCTYPE html>   //声明是HTML5文件
+    <html lang=“zh-cn”>   //lang属性表示网页语言设置为中文。
+    <head>
+    <meta name=“keywords”content=“HTML，CSS，JavaScript”>   //meta标记用来描述网页,有利于搜索引擎快速找到网站并正确分类。
+    <title>页标题栏内容</title>
+    </head>
+    <body>
+      网页内容
+    </body>
+    </html>
+ 一个HTML网页文件主要有头和文档主体两部分构成。
+ 
+ URL：
+  Uniform Resource Locator（统一资源定位系统），即地址，
+ 绝对路径：
+  绝对的，指的是该文件在硬盘上真实存在并以盘符开始的完整路径。
+ 相对路径：
+  与当前文件是具有相对关系的，即使存在的层次不同。
