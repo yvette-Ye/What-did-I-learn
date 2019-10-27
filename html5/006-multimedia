@@ -1,0 +1,37 @@
+图片：
+    <img src=“图片路径” alt=“提示文字” height=“规定图像的高度” width=“规定图像的宽度”/>
+    
+    为网站添加图标：
+        (1)创建一个16*16的图像，并保存为ICO格式（后缀名为.ico)，文件名为favicon.ico
+        (2)将图标图像放在网站的根目录里
+        (3)为触屏设备至少创建一个图像，并保存为PNG格式。如果只创建了一个，将其命名为apple-touch-icon.png
+
+视频：
+    <video src="视频路径" controls autoplay loop></video>
+    属性	        值	        描述
+    autoplay  	autoplay	  如果出现该属性，则视频在就绪后马上播放。
+    controls 	  controls	  如果出现该属性，则向用户显示控件，比如播放按钮。
+    height 	    pixels	    设置视频播放器的高度。
+    width	      pixels	    设置视频播放器的宽度。
+    loop 	      loop        如果出现该属性，则当媒介文件完成播放后再次开始播放（循环）。
+    muted 	    muted	      如果出现该属性，视频的音频输出为静音。
+    poster 	    URL	        规定视频正在下载时显示的图像，直到用户点击播放按钮。
+    preload 	  auto	      如果出现该属性，则视频在页面加载时进行加载，并预备播放。如果使用 "autoplay"，则忽略该属性。
+                metadata
+                none 
+
+音频：
+    <audio src="音频路径" controls autoplay loop></audio>
+
+内联框架：
+    <iframe width=“属性值” height=“属性值” src=“URL”></iframe>
+    一个内联框架被用来在当前 HTML 文档中嵌入另一个文档。简单地说：“是浏览器中的浏览器”。
+    属性	        值	        描述
+    name	       name	      规定 <iframe> 的名称。
+    frameborder	  1         规定是否显示框架周围的边框。
+                  0	
+    scrolling	   YES	      规定 <iframe> 看起来像是父文档中的一部分。
+                  NO
+                 AUTO
+    srcdoc	     HTML_code	规定页面中的 HTML 内容显示在 <iframe> 中。
+    seamless	   seamless	  规定是否在 iframe 中显示滚动条。
