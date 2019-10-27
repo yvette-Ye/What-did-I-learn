@@ -1,0 +1,29 @@
+每个表单都是以form标签开始
+语法规则: <input type=“属性值” name=“属性值” value=“属性值” size=“属性值” maxlength=“属性值”/>
+
+输入和元素：
+        文本域  <input typt="text">
+        多行文本  <input typt="textarea" cols=“属性值” rows=“属性值” >
+        搜索框  <input type="search">
+        日期域  <input type="date">
+        数字域  <input type="number">
+        范围域  <input type="range">
+        颜色域  <input type=“color”>
+        下拉列表  <select size=“设置或返回下拉列表中的可见行数” name=“属性值” multiple="设置或返回是否选择多个项目">
+                    <option value=“属性值”>列表项</option>
+                </select>
+        单选按钮  <input type=“radio” name=“属性值” value=“属性值” checked/>显示内容
+                  注：多个单选按钮name属性必须一致，才能显示在同一组。
+        复选框  <input type=“checkbox” name=“属性值” value=“属性值” checked/>显示内容。
+                  注：选项为同一组，name属性值必须相同。
+        按钮  <input type=“button” name=“属性值” value=“按钮”/>
+        提交按钮  <input type=“submit” name=“属性值” value=“提交”/>
+        重置按钮  <input type=“reset” name=“属性值” value=“重置”/>
+        将表单内的相关元素分组，在相关表单元素周围绘制边框  <fieldset> <legend>标题分组</legend> 分组内容 </fieldset>
+                <legend>为 <fieldset>元素定义标题。
+        让访问者上传文件  <input type="file">
+
+属性：
+        autofocus  页面加载后将焦点放到该字段
+        placeholder  指定一个出现在文本框中的提示文本，用户开始输入后该文本消失
+        required  需要访问者在提交表单之前必须完成该字段
