@@ -1,0 +1,27 @@
+1、标记名称  使用标记名称当作选择器
+           如 h1{font-size：16px；color：#ff0000；}
+           也可以 h1 em{color:red;}
+2、全局选择器  使用“*”字符来选择所有标记
+           如 *{font-size：16px；color：#FFFFFF；}
+3、类选择器  在标记中加入class属性，在css样式中加入class选择器声明
+           如 .classname{样式规则};
+           也可以 h1.error{color:red;}
+4、id选择器  在标记中加入id属性，在css样式中加入id选择器声明
+           如 #idname{样式规则};
+5、属性选择器  [属性]{属性：值；} //所有同一属性。
+                      如：[tilte]{color:blue;}
+             标记[属性]{属性：值;} //特定标记属性
+                      如：a[title]{color:yellow;}
+             [属性=“值”]{属性:值;} //属性值匹配筛选
+                      如：a[title=“AAA”]{color:blue;}
+        选择器	                  示例	                    示例说明
+      [attribute=value]	    [target=-blank]	      选择所有使用target="-blank"的元素
+      [attribute~=value]	  [title~=flower]	      选择标题属性包含单词"flower"的所有元素
+      [attribute|=language]	[lang|=en]	          选择一个lang属性的起始值="EN"的所有元素
+      [attribute^=value]	  a[src^="https"]	      选择每一个src属性的值以"https"开头的元素
+      [attribute$=value]	  a[src$=".pdf"]	      选择每一个src属性的值以".pdf"结尾的元素
+      [attribute*=value]	  a[src*="runoob"]    	选择每一个src属性的值包含子字符串"runoob"的元素
+6、伪类选择器
+      选择第一个或最后一个子元素  li:first-child{color:red;} li:last-child{color:red;}
+      选择元素的第一个字母或者第一行  p:first-letter{color:red;} p:first-line{color:red;}
+      链接元素的状态  a:link{} a:visited{} a:focus{} a:hover{} a:active{}
