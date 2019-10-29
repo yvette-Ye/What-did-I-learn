@@ -1,0 +1,39 @@
+值	            描述	            设置值
+font-style	  规定字体样式。	     normal
+                                italic
+                                oblique
+font-weight	  规定字体粗细。	     normal
+                                blod
+                                blder
+                                lighter
+font-size	   规定字体尺寸。	     数值+百分比
+                               数值+单位（pt，px，em，ex）
+font-family	 规定字体系列。	     字形名称
+text-align	 文字水平对齐方式。	 left
+                               center
+                               right
+                               Justify
+font-indent	 首行缩进。	        数值+百分比
+                               数值+单位（pt，px，em）
+letter-spacing	字符间距。	     normal
+                               数值+单位（pt，px，em）
+line-height	  行高。	           数值+单位
+word-wrap	   是否换行。	       break-word
+vertical-align	垂直对齐。	     baseline
+                              super
+                              sub
+                              top
+                              middle
+                              bottom
+text-decoration	文字装饰样式  	none
+                              underline
+                              line-throught
+                              overline
+text-transform	转换字母大小写。	none
+                              lowercase
+                              uppercase
+                              capitalize
+text-shadow	增加阴影效果  	    h-shadow	水平方向阴影大小。
+                              v-shadow	垂直方向阴影大小。
+                              blur	模糊淡化程度。
+                              color	阴影颜色
