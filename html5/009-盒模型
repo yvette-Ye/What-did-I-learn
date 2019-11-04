@@ -1,0 +1,74 @@
+从内到外：内容(content)、填充/内边距(padding)、边框(border)、外边距(margin)
+Margin(外边距) - 清除边框外的区域，外边距是透明的。
+Border(边框) - 围绕在内边距和内容外的边框。
+Padding(内边距) - 清除内容周围的区域，内边距是透明的。
+Content(内容) - 盒子的内容，显示文本和图像。
+
+边界（margin）
+在边框（border）外围，用来设置组件的边缘距离，共有上、下、左、右属性可以设置。
+margin	在一个声明中设置所有外边距属性。 margin-bottom	设置元素的下外边距。 margin-left	设置元素的左外边距。 margin-right	设置元素的右外边距。 margin-top	设置元素的上外边距。
+注：边界设置顺序 上 右 下 左，属性间用空格分开。
+        如只输入一个值，四个边界同时设置为此值。
+        如只输入两个值，则缺少值会以对边的设置值替代。
+
+边框（border）
+·border-style 属性用于设置元素所有边框的样式，或者单独地为各边设置边框样式。属性包括边框的宽度、样式、颜色和圆角。只有当这个值不是 none 时边框才可能出现。
+    值      描述
+  dotted	定义点状边框。在大多数浏览器中呈现为实线。
+  dashed	定义虚线。在大多数浏览器中呈现为实线。
+  solid	  定义实线。
+  double	定义双线。双线的宽度等于 border-width 的值。
+  groove	定义 3D 凹槽边框。其效果取决于 border-color 的值。
+  ridge	  定义 3D 垄状边框。其效果取决于 border-color 的值。
+  inset	  定义 3D inset 边框。其效果取决于 border-color 的值。
+  outset	定义 3D outset 边框。其效果取决于 border-color 的值。
+  inherit	规定应该从父元素继承边框样式。
+  注：border-top-style border-right-style border-bottom-style border-left-style 上下左右四边边框样式设置值同border-style。
+·border-width属性为元素的所有边框设置宽度，或者单独地为各边边框设置宽度。只有当边框样式不是 none 时才起作用。如果边框样式是 none，边框宽度实际上会重置为 0。
+    值      描述
+  thin	定义细的边框。
+  medium	默认。定义中等的边框。
+  thick	定义粗的边框。
+  length	数值+单位。
+  inherit	规定应该从父元素继承边框宽度。
+  注：border-top-width border-right-width border-bottom-width border-left-width上下左右四边边框宽度设置值同border-width。
+·border-color属性 设置四条边框的颜色。
+  注：border-top-color border-right-color border-bottom-color border-left-color上下左右四边边框颜色设置值同border-color。
+·border-radius属性用于设置四个 border-*-radius 属性。
+   值	     描述
+  length	定义圆角的形状。
+  %	以百分比定义圆角的形状。
+  注：border-top-left-radius border-top-right-radius border-bottom-left-radius border-bottom-right-radius上下左右四边边框圆角设置值同border-radius。
+·outline属性是绘制于元素周围的一条线，位于边框边缘的外围，可起到突出元素的作用。
+  轮廓（outline）属性指定元素轮廓的样式、颜色和宽度。
+    属性	        说明	                  值
+  outline	    在一个声明中设置所有的轮廓属性	outline-color 
+                                        outline-style
+                                        outline-width
+                                        inherit
+  outline-color	设置轮廓的颜色	           color-name
+                                        hex-number
+                                        rgb-number
+                                        invert
+                                        inherit
+  outline-style	设置轮廓的样式	           none
+                                        dotted
+                                        dashed
+                                        solid
+                                        double
+                                        groove
+                                        ridge
+                                        inset
+                                        outset
+                                        inherit
+                                        
+内边距(padding)
+padding使用后。一个盒子的宽度不变，内边距增加了。所以要想还是原来盒子的大小就必须要把盒子的宽度减掉一些。
+padding所增加了多少就要剪掉width多少，这样就不会改变容器（盒子）的大小。DIV是一个盒模型，padding内边距是计算在整个盒子的大小的。
+但是margin是外边距，并不计入DIV的大小。
+  属性	              描述
+padding	        在一个声明中设置所有内边距属性。
+padding-bottom	设置元素的下内边距。
+padding-left	  设置元素的左内边距。
+padding-right	  设置元素的右内边距。
+padding-top	    设置元素的上内边距。
