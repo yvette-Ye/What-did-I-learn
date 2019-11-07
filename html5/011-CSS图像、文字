@@ -1,0 +1,60 @@
+CSS3中属性的透明度是 opacity。opacity属性值从0.0 - 1.0。值越小，使得元素更加透明。
+img
+{
+  opacity:0.4;
+}
+
+transform：
+属性	                   描述
+transform	          向元素应用 2D 或 3D 转换。
+transform-origin	  允许你改变被转换元素的位置。
+transform-style	    规定被嵌套元素如何在 3D 空间中显示。
+perspective	        规定 3D 元素的透视效果。
+perspective-origin	规定 3D 元素的底部位置。
+backface-visibility	定义元素在不面对屏幕时是否可见。
+transform属性应用于元素的2D或3D转换。这个属性允许你将元素旋转，缩放，移动，倾斜等。
+
+ ·translate(x,y)方法，根据左(X轴)和顶部(Y轴)位置给定的参数，从当前元素位置移动。
+    translateX(n)     定义 2D 转换，沿着 X 轴移动元素。
+    translateY(n)     定义 2D 转换，沿着 Y 轴移动元素。
+     如：transform:translate(150px,100px);
+       -ms-transform:translate(550px,100px); /* IE 9 */
+       -webkit-transform:translate(350px,100px); /* Safari and Chrome */
+ ·rotate()方法，在一个给定度数顺时针旋转的元素。负值是允许的，这样是元素逆时针旋转。
+      3D 转换方法：
+      rotateX()，围绕其在一个给定度数X轴旋转的元素
+            transform:rotateX(120deg);
+	          -webkit-transform:rotateX(120deg); /* Safari and Chrome */
+      rotateY()，围绕其在一个给定度数Y轴旋转的元素
+            transform:rotateY(130deg);
+	          -webkit-transform:rotateY(130deg); /* Safari and Chrome */
+ ·scale(x,y)方法，该元素增加或减少的大小，取决于宽度（X轴）和高度（Y轴）的参数：
+    scaleX(n)  定义 2D 缩放转换，改变元素的宽度
+    scaleY(n)   定义 2D 缩放转换，改变元素的高度
+     如：transform:scale(2,3);
+        -ms-transform:scale(2,3); /* IE 9 */
+        -webkit-transform:scale(2,2); /* Safari and Chrome */
+ ·kew(<angle> [,<angle>]);
+    包含两个参数值，分别表示X轴和Y轴倾斜的角度，如果第二个参数为空，则默认为0，参数为负表示向相反方向倾斜。
+    skewX(<angle>);表示只在X轴(水平方向)倾斜。
+    skewY(<angle>);表示只在Y轴(垂直方向)倾斜。
+     如：transform:skew(50deg,50deg);
+        -ms-transform:skew(30deg,40deg); /* IE 9 */
+        -webkit-transform:skew(50deg,50deg); /* Safari and Chrome */
+ ·matrix()方法和2D变换方法合并成一个。
+    matrix 方法有六个参数，包含旋转，缩放，移动（平移）和倾斜功能。
+     如：transform:matrix(0.866,0.5,-0.5,0.866,0,0);
+        -ms-transform:matrix(0.866,0.5,-0.5,0.866,0,0); /* IE 9 */
+        -webkit-transform:matrix(0.866,0.5,-0.5,0.866,0,0); /* Safari and Chrome */
+
+CSS过渡
+过渡是元素从一种样式逐渐改变为另一种的效果。要实现这一点，必须规定两项内容：
+·指定要添加效果的CSS属性
+·指定效果的持续时间。
+如 transition: 3s;
+   -webkit-transition:width 2s; /* Safari */
+   transition:width 2s;
+	 -webkit-transition:width 2s; /* Safari */
+   -webkit-transition: width 2s, height 2s, -webkit-transform 2s; /* For Safari 3.1 to 6.0 */
+   transition: width 2s, height 2s, transform 2s;
+   transition: all 2s;   /*注意：该实例无法在 Internet Explorer 9 及更早 IE 版本上工作。*/
