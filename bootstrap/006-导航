@@ -1,0 +1,107 @@
+导航菜单
+    <p>标签式的导航菜单</p>
+    <ul class="nav nav-tabs">
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="#">SVN</a></li>
+      <li><a href="#">iOS</a></li>
+      <li><a href="#">VB.Net</a></li>
+      <li><a href="#">Java</a></li>
+      <li><a href="#">PHP</a></li>
+    </ul>
+
+    <p>基本的胶囊式导航菜单</p>
+    <ul class="nav nav-pills">
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="#">SVN</a></li>
+      <li><a href="#">iOS</a></li>
+      <li><a href="#">VB.Net</a></li>
+      <li><a href="#">Java</a></li>
+      <li><a href="#">PHP</a></li>
+    </ul>
+
+    <p>垂直的胶囊式导航菜单</p>
+    <ul class="nav nav-pills nav-stacked">
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="#">SVN</a></li>
+      <li><a href="#">iOS</a></li>
+      <li><a href="#">VB.Net</a></li>
+      <li><a href="#">Java</a></li>
+      <li><a href="#">PHP</a></li>
+    </ul>
+
+    <p>带有下拉菜单的标签</p>
+      <ul class="nav nav-tabs">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">SVN</a></li>
+        <li><a href="#">iOS</a></li>
+        <li><a href="#">VB.Net</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+            Java <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Swing</a></li>
+            <li><a href="#">jMeter</a></li>
+            <li><a href="#">EJB</a></li>
+            <li class="divider"></li>
+            <li><a href="#">分离的链接</a></li>
+          </ul>
+        </li>
+        <li><a href="#">PHP</a></li>
+      </ul>
+  
+      <p>带有下拉菜单的胶囊</p>
+      <ul class="nav nav-pills">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">SVN</a></li>
+        <li><a href="#">iOS</a></li>
+        <li><a href="#">VB.Net</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+            Java <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Swing</a></li>
+            <li><a href="#">jMeter</a></li>
+            <li><a href="#">EJB</a></li>
+            <li class="divider"></li>
+            <li><a href="#">分离的链接</a></li>
+          </ul>
+        </li>
+        <li><a href="#">PHP</a></li>
+      </ul>
+
+
+导航栏
+默认的导航栏
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">菜鸟教程</a>
+          </div>
+        <div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">iOS</a></li>
+                <li><a href="#">SVN</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        Java
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">jmeter</a></li>
+                        <li><a href="#">EJB</a></li>
+                        <li><a href="#">Jasper Report</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">分离的链接</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">另一个分离的链接</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        </div>
+    </nav>
+
+反色的导航栏
+为了创建一个带有黑色背景白色文本的反色的导航栏，只需要简单地向 .navbar class 添加 .navbar-inverse class 即可
