@@ -1,0 +1,42 @@
+定制字体图标：
+https://www.runoob.com/try/demo_source/bootstrap-glyph-customization.htm
+
+下拉菜单
+类	                        描述
+.dropdown	            指定下拉菜单，下拉菜单都包裹在 .dropdown 里
+.dropdown-menu	      创建下拉菜单
+.dropdown-menu-right	下拉菜单右对齐
+.dropdown-header	    下拉菜单中添加标题
+.dropup	              指定向上弹出的下拉菜单
+.disabled	            下拉菜单中的禁用项
+.divider	            下拉菜单中的分割线
+例
+<div class="dropdown">
+    <button type="button" class="btn dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown">主题
+        <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+        <li role="presentation" class="dropdown-header">下拉菜单标题</li>
+        <li role="presentation">
+            <a role="menuitem" tabindex="-1" href="#">Java</a>
+        </li>
+        <li role="presentation">
+            <a role="menuitem" tabindex="-1" href="#">数据挖掘</a>
+        </li>
+        <li role="presentation">
+            <a role="menuitem" tabindex="-1" href="#">数据通信/网络</a>
+        </li>
+        <li role="presentation" class="divider"></li>
+        <li role="presentation" class="dropdown-header">下拉菜单标题</li>
+        <li role="presentation">
+            <a role="menuitem" tabindex="-1" href="#">分离的链接</a>
+        </li>
+    </ul>
+</div>
+
+按钮组
+Class	                        描述
+.btn-group	              该 class 用于形成基本的按钮组。在 .btn-group 中放置一系列带有 class .btn 的按钮。
+.btn-toolbar	            该 class 有助于把几组 <div class="btn-group"> 结合到一个 <div class="btn-toolbar"> 中，一般获得更复杂的组件。
+.btn-group-lg｜sm｜xs 	   这些 class 可应用到整个按钮组的大小调整，而不需要对每个按钮进行大小调整。
+.btn-group-vertical	      该 class 让一组按钮垂直堆叠显示，而不是水平堆叠显示。
