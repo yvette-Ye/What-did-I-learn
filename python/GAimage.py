@@ -2,6 +2,7 @@
 叶欣宇
 遗传算法
 '''
+#参考解析： https://blog.csdn.net/weixin_40804043/article/details/86718379?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522158684613819724845003595%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=158684613819724845003595&biz_id=0&utm_source=distribute.pc_search_result.none-task-blog-soetl_so_first_rank_v2_rank_v25-6
 
 from PIL import Image, ImageDraw
 import os
