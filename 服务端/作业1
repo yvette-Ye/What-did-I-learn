@@ -1,0 +1,281 @@
+编写个人简历表单，提交到服务端。
+服务端获取数据，并将提交信息响应给客户端。
+
+==================================这是前端页面============================================================
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Log in</title>
+
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+
+<script>
+	function f1(){
+		$.ajax({
+			url:"Myservlet",
+			method:"POST",
+			contentType:"application/json;charset=utf-8"
+			data:$('#form1').serialize(),
+			datatype:"json"
+			success: function (){
+				alert("OK");
+			},
+		})
+	}
+</script>
+
+<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+<script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+
+<body style="margin: auto;">
+
+<header style="padding:0 40px">
+	<div class="page-header">
+  		<h1>Log in <small>input your information</small></h1>
+	</div>
+</header>
+
+<nav class="navbar navbar-light bg-info row" style="opacity:0.8">
+	<h3 class="navbar-text navbar-left"><b>Welcome to</b> <a href="#" class="navbar-link">My channel</a></h3>
+	
+	<form class="navbar-form navbar-left" role="search">
+  		<div class="form-inline">
+    		<input type="text" class="form-control" placeholder="Search">
+  			<button type="submit" class="glyphicon btn glyphicon-search"></button>
+  		</div>
+	</form>
+	<div class="col-4"></div>
+	<ul class="form-inline nav navbar navbar-right"> 
+         <li><a href="#"><span class="glyphicon glyphicon-user"></span> 注册</a></li> 
+         <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> 登录</a></li> 
+    </ul> 
+</nav>
+
+<main style="margin:2em 20%;" class="container">
+	<form action="Myservlet" method="post" class="form-horizontal" id="form1">
+	  <div class="form-group row">
+	    <div class="col-1">
+	    	<h5>Name</h5>
+	    </div>
+	    <div class="col-6">
+	      <input type="text" class="form-control" name="username" placeholder="Input your name">
+	    </div>
+	  </div>
+	  <div class="form-group row">
+	    <div class="col-1">
+	    	<h5>Age</h5>
+	    </div>
+	    <div class="col-6">
+	      <input type="text" class="form-control" name="userage" placeholder="Input your age">
+	    </div>
+	  </div>
+	  <div class="form-group row">
+	    <div class="col-1">
+	    	<h5>Phone</h5>
+	    </div>
+	    <div class="col-6">
+	      <input type="text" class="form-control" name="userphone" placeholder="Input your phone number">
+	    </div>
+	  </div>
+	  <div class="form-group row">
+	    <div class="col-1">
+	    	<h5>Sex</h5>
+	    </div>
+	    <div class="col-6">
+	      <label class="radio-inline">
+		  	<input type="radio" name="usersex" id="usersex1" value="Boy"> Boy
+		  </label>
+		  <label class="radio-inline">
+		  	<input type="radio" name="usersex" id="usersex2" value="Girl"> Girl
+		  </label>
+	    </div>
+	  </div>
+	  <div class="form-group row">
+	    <div class="col-1">
+	    	<h5>Hobby</h5>
+	    </div>
+	    <div class="col-6">
+	      <label class="form-check-label">
+        	<input type="checkbox" name="userhob" value="piano">Piano
+      	  </label>
+		  <label class="form-check-label">
+		  	<input type="checkbox" name="userhob" value="violin"> Violin
+		  </label>
+		  <label class="form-check-label">
+		  	<input type="checkbox" name="userhob" value="study"> Study
+		  </label>
+		  <label class="form-check-label">
+		  	<input type="checkbox" name="userhob" value="reading"> Reading
+		  </label>
+	    </div>
+	  </div>
+	  <div class="form-group row">
+	    <div class="col-1">
+	    	<h5>School</h5>
+	    </div>
+	    <div class="col-6">
+	    	<label for="sel1">Option your school:</label>
+      		<select class="form-control" name="userschool" id="sel1">
+	        	<option>Jilin Animation Institute</option>
+	       	 	<option>Jilin University</option>
+	        	<option>Beijing University</option>
+	        	<option>UCLA</option>
+      		</select>
+	    </div>
+	  </div>
+	  <div class="form-group row">
+	    <div class="col-1">
+	    	<h5>Password</h5>
+	    </div>
+	    <div class="col-6">
+	      <input type="password" class="form-control" id="userpwd" placeholder="Set your password">
+	    </div>
+	  </div>
+	  
+	  <div class="form-group row">
+	  <div class="col-2"></div>
+	    <div class="col-4">
+	      <button type="submit" id="btn" onclick="f1()" class="btn btn-lg btn-info btn-block">Sign in</button>
+	    </div>
+	  </div>
+	</form>
+	
+</main>
+
+<footer style="background:silver" class="navbar-fixed-bottom">
+	<div class="row">
+		<div class="col-3"></div>
+		<div class="col-6">
+			@2020 叶欣宇 <span>&nbsp; &nbsp; &nbsp; &nbsp; </span>
+			<a href="#">邮箱</a>｜<a href="#">微信</a>｜<a href="#">权利声明</a>｜<a href="#">帮助中心</a>｜<a href="#">问题反馈</a>｜<a href="#">版本更新</a>
+		</div>
+		<div class="col-3"></div>
+	</div>
+</footer>
+
+</body>
+</html>
+
+=======================================这是Servlet=======================================================================================
+
+package com.servlet;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+/**
+ * Servlet implementation class Myservlet
+ */
+@WebServlet("/Myservlet")
+public class Myservlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public Myservlet() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+//		response.getWriter().append("Served at: ").append(request.getContextPath());
+		request.setCharacterEncoding("utf-8");
+		response.setCharacterEncoding("utf-8");
+		response.setContentType("text/html;charset=utf-8");
+		
+		String name=request.getParameter("username");
+		String age=request.getParameter("userage");
+		String sex=request.getParameter("usersex");
+		String phone = request.getParameter("userphone");
+		
+		PrintWriter out = response.getWriter();
+		out.println("<!DOCTYPE html>\n" + 
+				"<html>\n" + 
+				"<head>\n" + 
+				"<meta charset=\"UTF-8\">\n" + 
+				"<title>Log in</title>" +
+				"<link rel=\"stylesheet\" href=\"https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css\">\n" + 
+				"<script src=\"https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js\"></script>\n" + 
+				"<script src=\"https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js\"></script>\n" + 
+				"<script src=\"https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js\"></script>\n" + 
+				"<link rel=\"stylesheet\" href=\"https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css\">\n" + 
+				"</head>"+
+				"<body style=\"margin: auto;\">\n" + 
+				"\n" + 
+				"<header style=\"padding:0 40px\">\n" + 
+				"	<div class=\"page-header\">\n" + 
+				"  		<h1>HELLO! <small>There is your information</small></h1>\n" + 
+				"	</div>\n" + 
+				"</header>" +
+				"<nav class=\"navbar navbar-light bg-info row\" style=\"opacity:0.8\">\n" + 
+				"	<h3 class=\"navbar-text navbar-left\"><b>wish you</b> <a href=\"#\" class=\"navbar-link\">enjoy this page!</a></h3>\n" + 
+				"	\n" + 
+				"	<form class=\"navbar-form navbar-left\" role=\"search\">\n" + 
+				"  		<div class=\"form-inline\">\n" + 
+				"    		<input type=\"text\" class=\"form-control\" placeholder=\"Search\">\n" + 
+				"  			<button type=\"submit\" class=\"glyphicon btn glyphicon-search\"></button>\n" + 
+				"  		</div>\n" + 
+				"	</form>\n" + 
+				"	<div class=\"col-4\"></div>\n" + 
+				"	<ul class=\"form-inline nav navbar navbar-right\"> \n" + 
+				"         <li><a href=\"#\"><span class=\"glyphicon glyphicon-user\"></span> 注册</a></li> \n" + 
+				"         <li><a href=\"#\"><span class=\"glyphicon glyphicon-log-in\"></span> 登录</a></li> \n" + 
+				"    </ul> \n" + 
+				"</nav>" +
+				"<main style=\"margin:2em 20%;\" class=\"container\">" +
+				"	<div class=\"container\">\n" + 
+				"		<div class=\"jumbotron\">\n" + 
+				"    		<h1>"+name+"</h1> \n" + 
+				"    		<p>welcome to my page!!</p> \n" + 
+				"			<div class=\"container\">\n" + 
+				"  				<h4>you are a "+age+" year old "+sex+", </h4>    \n" + 
+				"  				<h5>and your phone number is: <mark>"+phone+"</mark> ,if you have any question please call me with 137****1320。</h5>\n" + 
+				"			</div>" +
+				"  		</div>\n" + 
+				"	</div>" +
+				"</main>\n" + 
+				"\n" + 
+				"<footer style=\"background:silver\" class=\"navbar-fixed-bottom\">\n" + 
+				"	<div class=\"row\">\n" + 
+				"		<div class=\"col-3\"></div>\n" + 
+				"		<div class=\"col-6\">\n" + 
+				"			@2020 叶欣宇 <span>&nbsp; &nbsp; &nbsp; &nbsp; </span>\n" + 
+				"			<a href=\"#\">邮箱</a>｜<a href=\"#\">微信</a>｜<a href=\"#\">权利声明</a>｜<a href=\"#\">帮助中心</a>｜<a href=\"#\">问题反馈</a>｜<a href=\"#\">版本更新</a>\n" + 
+				"		</div>\n" + 
+				"		<div class=\"col-3\"></div>\n" + 
+				"	</div>\n" + 
+				"</footer>\n" + 
+				"\n" + 
+				"</body>"
+				);
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		doGet(request, response);
+	}
+
+}
